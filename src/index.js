@@ -73,7 +73,7 @@ function App() {
         </a>
         using
         <a
-          href="https://github.com/KpopMama07/Vanilla-Weather-App"
+          href="https://github.com/Tsunoda-Stylings/Weather-react"
           target="_blank"
           rel="noreferrer"
         >
