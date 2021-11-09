@@ -1,0 +1,28 @@
+h1,
+header {
+  text-align: center;
+}
+
+header {
+  font-size: 40px;
+}
+
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.time {
+  position: relative;
+  text-align: right;
+  font-size: 65px;
+  left: 5px;
+  bottom: 130px;
+}
+
+.current {
+  text-align: right;
+  font-size: 75px;
+  color: #cab8ff;
+  text-shadow: 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black;
+}
