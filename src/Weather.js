@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import WeatherInfo from "./WeatherInfo";
-import Time from "./Time";
 import axios from "axios";
 import "./Weather.css";
 
@@ -14,6 +13,7 @@ export default function Weather(props) {
       coordinates: response.data.coord,
       temperature: response.data.main.temp,
       humidity: response.data.main.humidity,
+      wind: response.data.wind.speed,
       date: new Date(response.data.dt * 1000),
       description: response.data.weather[0].description,
       icon: response.data.weather[0].icon,
@@ -32,7 +32,7 @@ export default function Weather(props) {
 
   function search() {
     const apiKey = "c6f8ef4575250284954db9f4dfa7a996";
-    let apiUrl = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse);
   }
 
@@ -43,9 +43,17 @@ export default function Weather(props) {
           <div className="Weather">
             <header>The Weather Forecast in</header>
             <h1>{weatherData.city}</h1>
-            <p class="time">
-              <Time date={weatherData.date} />
-            </p>
+            <small class="player">
+              <iframe
+                src="https://open.spotify.com/embed/playlist/6ouFe7c2VyLtHUcq3uIguP?theme=0"
+                width="30%"
+                height="80"
+                frameBorder="0"
+                allowtransparency="true"
+                allow="encrypted-media"
+                title="jsx-a11y/iframe-has-title"
+              ></iframe>
+            </small>
             <div className="container">
               <WeatherInfo data={weatherData} />
             </div>

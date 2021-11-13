@@ -13,10 +13,12 @@ body {
   margin: 20px auto;
   padding: 20px;
 }
-
-.search,
+.search {
+  font-size: 30px;
+}
 .btn-primary {
   font-size: 30px;
+  background-color: #cab8ff !important;
 }
 
 .btn-secondary {
@@ -28,4 +30,14 @@ body {
 }
 .info {
   text-align: center;
+}
+.App footer {
+  text-align: center;
+  font-size: 12px;
+  margin: 10px 0;
+}
+
+.App a {
+  text-decoration: none;
+  color: #9c19e0;
 }

@@ -18,38 +18,7 @@ function App() {
           description="Cloudy"
           actualDegree="29"
         />
-
         
-        <div className="row justify-content-evenly">
-          <div className="col-3">
-            <span
-              id="celsius"
-              button
-              type="button"
-              className="btn btn-secondary btn-lg"
-            >
-              °C
-            </span>
-          </div>
-          <div className="col-5">
-            <button
-              type="button"
-              className="btn btn-success"
-              id="current-location-button"
-            >
-              CURRENT LOCATION
-            </button>
-          </div>
-          <div className="col-3">
-            <span
-              id="fahrenheit"
-              type="button"
-              className="btn btn-warning btn-lg"
-            >
-              °F
-            </span>
-          </div>
-        </div>
         <p className="info">
           This page was built and coded by&nbsp;
           <a
