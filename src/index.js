@@ -19,21 +19,7 @@ function App() {
           actualDegree="29"
         />
 
-        <form className="search-form mb-3">
-          <div className="d-flex justify-content-center">
-            <input
-              type="search"
-              className="search"
-              id="searchInput"
-              placeholder="Enter your city"
-              autoComplete="off"
-              autoFocus="on"
-            />
-            <button type="submit" className="btn btn-primary">
-              Search
-            </button>
-          </div>
-        </form>
+        
         <div className="row justify-content-evenly">
           <div className="col-3">
             <span
