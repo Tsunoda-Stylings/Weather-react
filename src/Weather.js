@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import FormattedDate from "./FormattedDate";
+import WeatherInfo from "./WeatherInfo";
 import Time from "./Time";
 import axios from "axios";
 import "./Weather.css";
@@ -16,8 +16,7 @@ export default function Weather(props) {
       humidity: response.data.main.humidity,
       date: new Date(response.data.dt * 1000),
       description: response.data.weather[0].description,
-      icon: response.data.weather[0].description,
-      wind: response.data.wind.speed,
+      icon: response.data.weather[0].icon,
       city: response.data.name,
     });
   }
@@ -48,37 +47,7 @@ export default function Weather(props) {
               <Time date={weatherData.date} />
             </p>
             <div className="container">
-              <h2>
-                <div className="row">
-                  <div className="col-6">
-                    <ul>
-                      <li class="weekday">
-                        <FormattedDate date={weatherData.date} />
-                      </li>
-                      <li class="humidity">
-                        Humidity: {weatherData.humidity}%
-                      </li>
-                      <li class="wind">Wind Speed: {weatherData.wind}km/h</li>
-                      <li class="text-capitalize description">
-                        {weatherData.description}
-                      </li>
-                    </ul>
-                  </div>
-                  <div className="col-2">
-                    <img
-                      src={weatherData.icon}
-                      alt={weatherData.description}
-                      class="icon"
-                      id="icon"
-                    ></img>
-                  </div>
-                  <div className="col-1">
-                    <main class="current">
-                      {Math.round(weatherData.temperature)}℃
-                    </main>
-                  </div>
-                </div>
-              </h2>
+              <WeatherInfo data={weatherData} />
             </div>
           </div>
         </div>
@@ -87,7 +56,6 @@ export default function Weather(props) {
             <input
               type="search"
               className="search"
-              id="searchInput"
               placeholder="Enter your city"
               autoComplete="off"
               autoFocus="on"
