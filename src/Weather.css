@@ -47,16 +47,24 @@ li {
   h1,
   header {
     font-size: 33px;
+    margin-bottom: 20px;
   }
   .player,
   .time {
     display: none;
   }
-  .temperature,
-  .unit,
+
   .icon {
     position: relative;
-    left: 50px;
-    margin-bottom: 10px;
+    left: 20px;
+    top: 120px;
+  }
+  .temperature,
+  .unit {
+    position: relative;
+    left: 130px;
+  }
+  .date {
+    margin-top: 15px;
   }
 }
