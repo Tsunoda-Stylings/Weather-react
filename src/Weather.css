@@ -26,7 +26,7 @@ li {
   font-weight: 400;
   position: relative;
   line-height: 1;
-  top: -150px;
+  top: -160px;
   right: 60px;
 }
 .Weather .temperature {
@@ -42,4 +42,21 @@ li {
   position: relative;
   bottom: 0px;
   left: 250px;
+}
+@media (max-width: 800px) {
+  h1,
+  header {
+    font-size: 33px;
+  }
+  .player,
+  .time {
+    display: none;
+  }
+  .temperature,
+  .unit,
+  .icon {
+    position: relative;
+    left: 50px;
+    margin-bottom: 10px;
+  }
 }

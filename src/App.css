@@ -21,13 +21,6 @@ body {
   background-color: #cab8ff !important;
 }
 
-.btn-secondary {
-  font-size: 45px;
-}
-.btn-warning {
-  font-size: 45px;
-  margin-left: 100px;
-}
 .info {
   text-align: center;
 }
@@ -40,4 +33,17 @@ body {
 .App a {
   text-decoration: none;
   color: #9c19e0;
+}
+@media (max-width: 820px) {
+  .search {
+    font-size: 20px;
+  }
+  body {
+    max-height: 100%;
+  }
+}
+@media (max-width: 650px) {
+  .search {
+    font-size: 15px;
+  }
 }
