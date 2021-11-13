@@ -9,32 +9,32 @@ function App() {
   return (
     <div className="App">
       <div className="container">
-        <Weather
-          city="Shibukawa"
-          time="1:00"
-          weekday="Thursday"
-          humidity="60"
-          wind="2"
-          description="Cloudy"
-          actualDegree="29"
-        />
-        
-        <p className="info">
+        <Weather city="Shibukawa" />
+
+        <p className="info mt-3">
           This page was built and coded by&nbsp;
           <a
             href="https://www.linkedin.com/in/jasmine-tsunoda89/"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
           >
-            &nbsp;Jasmine Tsunoda
+            Jasmine Tsunoda
           </a>
           &nbsp;using&nbsp;
           <a
             href="https://github.com/Tsunoda-Stylings/Weather-react"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
           >
             Open-Source Code
+          </a>{" "}
+          and{" "}
+          <a
+            href="https://tsunodastylings-reactweatherproject.netlify.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            hosted on Netlify
           </a>
           .
         </p>
