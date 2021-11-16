@@ -16,6 +16,15 @@ export default function WeatherForecast(props) {
     setForecastReady(true);
   }
 
+  function load() {
+    let apiKey = "c6f8ef4575250284954db9f4dfa7a996";
+    let longitude = props.coord.lon;
+    let latitude = props.coord.lat;
+    let apiURL = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
+
+    axios.get(apiURL).then(handleResponse);
+  }
+
   if (forecastReady) {
     return (
       <div className="WeatherForecast mt-3 mb-3">
@@ -35,13 +44,7 @@ export default function WeatherForecast(props) {
       </div>
     );
   } else {
-    let apiKey = "c6f8ef4575250284954db9f4dfa7a996";
-    let longitude = props.coord.lon;
-    let latitude = props.coord.lat;
-    let apiURL = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
-
-    axios.get(apiURL).then(handleResponse);
-
+    load();
     return null;
   }
 }
